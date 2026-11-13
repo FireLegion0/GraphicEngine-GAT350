@@ -1,0 +1,20 @@
+#pragma once
+#include "RenderComponent.h"
+#include "Resources/Resource.h"
+
+namespace nu
+{
+	class ModelComponent : public RendererComponent
+	{
+	public:
+		CLASS_PROTO(ModelComponent)
+
+		void Draw(const Renderer& renderer) override;
+		void Read(const json::value_t& value) override;
+
+	private:
+		res_t<class Model> m_model;
+		std::vector<res_t<class MaterialInstance>> m_materials;
+
+	};
+}
