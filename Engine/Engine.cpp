@@ -4,12 +4,6 @@
 #include "pch.h"
 #include "Engine.h"
 
-// TODO: This is an example of a library function
-//void fnEngine()
-//{
-//	std::cout << "Hello from Engine!\n";
-//}
-
 namespace nu {
 	//Engine engine;
 
@@ -19,12 +13,16 @@ namespace nu {
 		m_input.Initialize();
 		m_audio.Initialize();
 
+		m_editor = std::make_unique<Editor>();
+		m_editor->Initialize(m_renderer);
+
 		return true;
 	}
 
 	void Engine::Shutdown() {
 		m_input.Shutdown();
 		m_particleSystem.Shutdown();
+		m_editor->Shutdown();
 		m_renderer.Shutdown();
 		m_audio.Shutdown();
 	}

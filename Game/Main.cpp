@@ -75,6 +75,9 @@ int main() {
         //SCENE
         scene.Update(dt);
 
+        //EDITOR
+        Engine::Get().GetEditor();
+
 
         // RENDER
         renderer.BeginFrame();

@@ -48,7 +48,7 @@ namespace nu {
         void SetTransform(const Transform& transform) { m_transform = transform; }
 
        void SetPosition(const glm::vec3& position) { m_transform.position = position; }
-       void SetRotation(const glm::vec3& rotation) { m_transform.SetRotationEuler(rotation); }
+       void SetRotation(const glm::vec3& rotation) { m_transform.SetRotation(rotation); }
        void SetScale(const glm::vec3& scale) { m_transform.scale = scale; }
 
         const std::string& GetName() const { return m_name; }
@@ -66,6 +66,7 @@ namespace nu {
         bool GetPersist() const { return m_persist; }
 
 		virtual void Read(const json::value_t& value) override;
+        void UpdateGui() override;
 
         void AddComponent(std::unique_ptr<Component> component);
 

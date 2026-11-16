@@ -8,6 +8,7 @@
 #include "Math/Vector3.h"
 #include "Math/MathUtils.h"
 #include "Math/Transform.h"
+#include "Editor/Editor.h"
 #include "Resources/ResourceManager.h"
 #include "Resources/Resource.h"
 #include "Renderer/Text.h"
@@ -41,6 +42,7 @@ namespace nu {
 		Time& GetTime() { return m_time; }
 		ParticleSystem& GetPS() { return m_particleSystem; }
 		Audio& GetAudio() { return m_audio; }
+		Editor& GetEditor() { return *m_editor; }
 
 		Engine(const Engine&) = delete;
 		Engine& operator = (const Engine&) = delete;
@@ -53,6 +55,8 @@ namespace nu {
 
 		Time m_time;
 		ParticleSystem m_particleSystem;
+
+		std::unique_ptr<Editor > m_editor;
 	};
 
 	extern Engine engine;
