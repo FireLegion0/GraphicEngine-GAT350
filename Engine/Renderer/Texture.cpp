@@ -220,4 +220,13 @@ namespace nu
 		// texture created and uploaded successfully
 		return true;
 	}
+
+	void Texture::UpdateGui()
+	{
+		Resource::UpdateGui();
+		float width = ImGui::GetContentRegionAvail().x;
+
+		ImGui::Image((ImTextureID)m_gpuTexture, ImVec2{ width, width * (m_height / (float)m_width)});
+		ImGui::Text("%i x %d", m_width, m_height);
+	}
 }

@@ -44,7 +44,7 @@ Output main(Input input)
     output.worldPos = mul(object.model, float4(input.position, 1.0f)).xyz;
     output.position = mul(frame.viewProjection, float4(output.worldPos, 1.0f));
     
-    output.normal = normalize(mul((float3x3) object.model, input.normal));
+    output.normal   = normalize(mul((float3x3) object.model, input.normal));
 
     return output;
 }

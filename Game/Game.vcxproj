@@ -204,6 +204,9 @@
     <None Include="..\Build\Assets\Animations\Run.json" />
     <None Include="..\Build\Assets\Data\level.json" />
     <None Include="..\Build\Assets\Data\scene.json" />
+    <None Include="..\Build\Assets\Materials\ground.instance.json" />
+    <None Include="..\Build\Assets\Materials\lava.instance.json" />
+    <None Include="..\Build\Assets\Materials\multi.material.json" />
     <None Include="..\Build\Assets\Materials\ogre.instance.json" />
     <None Include="..\Build\Assets\Materials\phong.material.json" />
     <None Include="..\Build\Assets\Materials\squirrel.instance.json" />

@@ -118,11 +118,7 @@ namespace nu {
 
 	bool Renderer::EndFrame()
 	{
-		if (m_gpuRenderPass)
-		{
-			SDL_EndGPURenderPass(m_gpuRenderPass);
-			m_gpuRenderPass = nullptr;
-		}
+		EndRenderPass();
 
 		if (!SDL_SubmitGPUCommandBuffer(m_commandBuffer))
 		{
@@ -131,8 +127,18 @@ namespace nu {
 		}
 
 		m_commandBuffer = nullptr;
+		m_swapchainTexture = nullptr;
 
 		return true;
+	}
+
+	void Renderer::EndRenderPass()
+	{
+		if(m_gpuRenderPass)
+		{
+			SDL_EndGPURenderPass(m_gpuRenderPass);
+			m_gpuRenderPass = nullptr;
+		}
 	}
 	
 

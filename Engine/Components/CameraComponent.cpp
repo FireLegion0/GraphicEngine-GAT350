@@ -24,6 +24,7 @@ namespace nu
 
 	void CameraComponent::Draw(const Renderer& renderer)
 	{
+
 	}
 
 	void CameraComponent::Read(const json::value_t& value)
@@ -33,5 +34,12 @@ namespace nu
 		JSON_READ_NAME_REQ(value, "fov", m_fov);
 		JSON_READ_NAME_REQ(value, "near_plane", m_near);
 		JSON_READ_NAME_REQ(value, "far_plane", m_far);
+	}
+
+	void CameraComponent::UpdateGui()
+	{
+		ImGui::DragFloat("FCV", &m_fov, 0.1);
+		ImGui::DragFloat("Near Plane", &m_near, 0.1);
+		ImGui::DragFloat("Far Plane", &m_far, 0.1);
 	}
 }
