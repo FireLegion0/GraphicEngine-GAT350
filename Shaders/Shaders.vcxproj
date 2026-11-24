@@ -104,6 +104,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <FxCompile Include="color.frag.hlsl" />
+    <FxCompile Include="cube_map.frag.hlsl" />
+    <FxCompile Include="cube_map.vert.hlsl" />
     <FxCompile Include="gouraud.frag.hlsl" />
     <FxCompile Include="gouraud.vert.hlsl" />
     <FxCompile Include="multi.frag.hlsl" />

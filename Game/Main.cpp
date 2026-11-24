@@ -11,24 +11,19 @@
 #include "Renderer/Pipeline.h"
 #include "Components/CameraComponent.h"
 #include "Resources/ResourceManager.h"
+#include "Framework/Scene.h"
 
 #include <fmod.hpp>
 
 #include <iostream>
 #include <vector>
 #include "SDL3/SDL.h"
-#include "Framework/Scene.h"
 #include <map>
 #include <memory>
 #include <random>
 #include <fstream>
 
 #define GLM_ENABLE_EXPERIMENTAL
-
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtx/euler_angles.hpp>
-#include <glm/gtx/transform.hpp>
 
 #define MAX(a, b) ((a > b) ? a : b)
 
@@ -37,17 +32,11 @@ using namespace nu;
 int main() {
 	SetWorkingDirectory("assets"); //Keep this at the top of main() to ensure the working directory is set before any assets are loaded
 
-    //return 0;
-    
-    // create audio system
-
-    // load the json data from a file
-
 	//INITIALIZATION
     Engine::Get().Initialize();
 
 	Scene scene;
-	scene.Load("scenes/scene.json");
+	scene.Load("scenes/scene_skybox.json");
     
 	auto& renderer = Engine::Get().GetRenderer();
 
