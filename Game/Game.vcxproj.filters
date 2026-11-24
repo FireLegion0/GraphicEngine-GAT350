@@ -81,5 +81,20 @@
     <None Include="..\Build\Assets\Materials\phong_norm.material.json">
       <Filter>Assets\Materials</Filter>
     </None>
+    <None Include="..\Build\Assets\Scenes\scene_helm.json">
+      <Filter>Assets\Scenes</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\phong_default.material.json">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\skybox.instance.json">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\skybox.material.json">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Scenes\scene_skybox.json">
+      <Filter>Assets\Scenes</Filter>
+    </None>
   </ItemGroup>
 </Project>
