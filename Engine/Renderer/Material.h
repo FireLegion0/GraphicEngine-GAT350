@@ -16,7 +16,7 @@ namespace nu
 		float shininess = 32.0f;
 
 		glm::vec3 emissiveColor{ 0.0f };
-		float padding{ 0.0f };
+		float normalStr{ 1.0f };
 
 		glm::vec2 tiling{ 1.0f };
 		glm::vec2 offset{ 0.0f };

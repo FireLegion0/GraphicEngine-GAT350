@@ -25,6 +25,9 @@
     <Filter Include="Assets\Materials">
       <UniqueIdentifier>{263cb7f8-8d2f-40ab-be89-527ac1a4f0dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\SkyBoxes">
+      <UniqueIdentifier>{8bb84c36-db58-4d5f-965b-be1c38897a13}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -70,6 +73,12 @@
       <Filter>Assets\Materials</Filter>
     </None>
     <None Include="..\Build\Assets\Materials\lava.instance.json">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Textures\SkyBox\skybox.cubemap.json">
+      <Filter>Assets\SkyBoxes</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\phong_norm.material.json">
       <Filter>Assets\Materials</Filter>
     </None>
   </ItemGroup>

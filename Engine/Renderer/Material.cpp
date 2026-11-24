@@ -84,6 +84,8 @@ namespace nu
 
 	void Material::UpdateGui()
 	{
+
+
 		ImGui::Text("Vertex Shader: %s", m_vertexShader->GetName().c_str());
 		ImGui::Text("Fragment Shader: %s", m_fragmentShader->GetName().c_str());
 
